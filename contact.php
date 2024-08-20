@@ -1,34 +1,27 @@
 <?php
- 
-  $to = 'winsfolio@gmail.com' . "\r\n";
-  $subject = 'Get a Quote Request From landio';
-  $name = $_POST['Complete_Name'];
-  $email = $_POST['Email_Address']; 
-  $phone = $_POST['Phone_No']; 
-  $city = $_POST['City_Live']; 
-  $age = $_POST['Age_Old']; 
-  // $language = $_POST['fav_language']; 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $complete_name = $_POST['Complete_Name'];
+    $email_address = $_POST['Email_Address'];
+    $phone_no = $_POST['Phone_No'];
+    $city_live = $_POST['City_Live'];
+    $age_old = $_POST['Age_Old'];
 
-   $headers .= "Reply-To: $name <$email>\r\n"; 
-    $headers .= "Return-Path: The Sender <$email>\r\n"; 
-    $headers .= "From: $email" ."\r\n" .
-    $headers .= "landio Get A Quote\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/html; charset=utf-8\r\n";
-    $headers .= "X-Priority: 3\r\n";
-    $headers .= "X-Mailer: PHP". phpversion() ."\r\n" ;
+    $to = "payonner2000@gmail.com"; // Replace with your email address
+    $subject = "New Signup Submission";
 
+    $message = "Complete Name: $complete_name\n";
+    $message .= "Email Address: $email_address\n";
+    $message .= "Phone Number: $phone_no\n";
+    $message .= "City: $city_live\n";
+    $message .= "Age: $age_old\n";
 
-  $message = "************************************************** \r\n" .
-  	         "Request from landio Get a Quote Form!  \r\n" .
-             "************************************************** \r\n" .	
-    
-  	        "Name: " . $name . "\r\n" .
-  	        "E-mail: " . $email . "\r\n" .
-            "Phone: " . $phone . "\r\n" .
-  	        // "Preferred Consult Method:: " . $language . "\r\n"; 
+    $headers = "From: no-reply@yourdomain.com\r\n"; // Replace with your domain
+    $headers .= "Reply-To: $email_address\r\n";
 
-
-	$mail = mail($to, $subject, $message, $headers); 
-
- ?>
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Thank you for signing up!";
+    } else {
+        echo "There was an error processing your request. Please try again later.";
+    }
+}
+?>
