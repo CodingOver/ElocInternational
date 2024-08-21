@@ -246,7 +246,7 @@ header:before {
     font-weight: bold;
 }
 .top-bar ul li a:hover,.top-bar a:hover{
-    color: #ff5c5c;
+    color: #f49813;
 }
 .top-bar ul li a,.top-bar a {
     transition: .3s ease-in-out;
@@ -469,7 +469,7 @@ form#contact-form h3 {
 }
 /* 5. btn */
 .btn {
-    background-color: #ff5c5c;
+    background-color: #F49813;
     padding: 14px 38px;
     border-radius: 37px;
     color: #fff;
@@ -491,7 +491,7 @@ form#contact-form h3 {
 .heading span {
     font-size: 18px;
     letter-spacing: 1px;
-    color: #ff5c5c;
+    color: #f49813;
     font-weight: 900;
     padding-bottom: 10px;
     display: block;
@@ -512,7 +512,7 @@ form#contact-form h3 {
     position: absolute;
     width: 12px;
     height: 12px;
-    background-color: #ff5c5c;
+    background-color: #ff7300;
     border-radius: 27px;
     border: 1px solid;
     left: 0;
@@ -705,7 +705,7 @@ ul.star h6 {
     padding-bottom: 10px;
 }
 a.brand.t i{
-    background-color: #40c0f0;
+    background-color: #f14646;
 }
 a.brand.in i{
     background-color: #e274d4;
@@ -742,9 +742,10 @@ a.brand i {
     border-radius: 50px;
     border: 3px solid #000;
     transition: .3s ease-in-out;
+    width: 80%;
 }
 .team-text a img {
-    width: 38px;
+    width: 35px;
 }
 /* 11. quotation-mark */
 .quotation-mark {
@@ -1055,8 +1056,8 @@ a.heading{
 .accordion img {
     margin: auto;
     display: flex;
-    margin-bottom: -160px;
-    margin-top: 40px;
+    margin-bottom: -190px;
+    margin-top: -90px;
 }
 .clients-slider.owl-carousel img {
     margin: auto;
@@ -1187,6 +1188,10 @@ span#progress-value i {
     margin: auto;
 }
 /* 18. hero-text.section-video */
+.hero-text .mainHeading {
+    font-size: 20px;
+    font-weight: bolder;
+}
 .hero-text.section-video {
     margin-top: 10px;
 }
