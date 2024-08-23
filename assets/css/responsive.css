@@ -315,6 +315,9 @@
   .accordion-item .icon {
     right: 6px;
   }
+  .count-p {
+    display: none;
+  }
 }
 @media(max-width: 768px){
   .questions .heading,.heading {
