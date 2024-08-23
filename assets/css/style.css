@@ -256,10 +256,13 @@ header:before {
     position: relative;
     padding-top: 70px;
     overflow: hidden;
-    background-color: #fffacd;
     padding-bottom: 70px;
     border-bottom: 3px solid #000;
+    
+    /* background-color: #fffacd; */
+    
 }
+
 .hero-section img.shaps {
     animation: float 20s infinite;
     right: 45%;
@@ -268,7 +271,7 @@ header:before {
 }
 .hero-text {
     position: relative;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     width: 84%;
 }
 .hero-text h2 {
@@ -407,7 +410,10 @@ form#contact-form h3 {
 }
 .get-a-quote {
     margin-bottom: 16px;
-    background-color: lemonchiffon;
+    /* background-color: lemonchiffon; */
+    background-image: url("../img/BackgroundEng.jpg") ;
+    background-size:cover;
+    background-repeat: no-repeat;
     padding: 50px;
     border-radius: 40px;
     position: relative;
@@ -416,6 +422,13 @@ form#contact-form h3 {
     box-shadow: 14px 14px 0px 0px rgba(0,0,0,1);
     -webkit-box-shadow: 14px 14px 0px 0px rgba(0,0,0,1);
     -moz-box-shadow: 14px 14px 0px 0px rgba(0,0,0,1);
+}
+.get-a-quote p {
+    background: #fff;
+    color: #1a56ce;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
 }
 .get-a-quote input[type="text"], .get-a-quote input[type="number"] {
     width: 100%;
