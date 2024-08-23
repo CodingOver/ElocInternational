@@ -423,13 +423,10 @@ form#contact-form h3 {
     -webkit-box-shadow: 14px 14px 0px 0px rgba(0,0,0,1);
     -moz-box-shadow: 14px 14px 0px 0px rgba(0,0,0,1);
 }
-.get-a-quote p {
-    background: #fff;
-    color: #1a56ce;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 25px;
+.get-a-quote .sign-up_title {
+    margin: 10px 0;
 }
+
 .get-a-quote input[type="text"], .get-a-quote input[type="number"] {
     width: 100%;
     height: 60px;
@@ -447,7 +444,11 @@ form#contact-form h3 {
     font-weight: 700;
     padding-bottom: 10px;
     padding-top: 10px;
-    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    color: #1c56ce;
 }
 .radio-button {
     margin-right: 15px;
