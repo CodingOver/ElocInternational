@@ -35,8 +35,8 @@
 
 body {
     font-family: 'Epilogue';
-    overflow-x: hidden;
     background-color: #0F0F11;
+    overflow-x: hidden;
 }
 
 /* 1. preloader */
@@ -151,7 +151,6 @@ p
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 a,h2,h3,h4,h5,h6{
     color: #ffffff;
@@ -387,6 +386,9 @@ img.video-img {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+}
+.video .stars {
+    margin: 15px 0;
 }
 .hero-text > img {
     margin-left: auto;
