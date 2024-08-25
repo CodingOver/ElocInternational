@@ -38,6 +38,29 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Clear The cache Automaticly  -->
+    <script>
+      // Function to generate a unique version number (timestamp)
+      function cacheBuster(url) {
+          return url + '?v=' + new Date().getTime();
+      }
+
+      // Example of how to use it with CSS and JS files
+      document.addEventListener("DOMContentLoaded", function() {
+          // Update the href of the CSS file to include the cache buster
+          var stylesheet = document.querySelector('link[rel="stylesheet"]');
+          if (stylesheet) {
+              stylesheet.href = cacheBuster(stylesheet.href);
+          }
+
+          // Update the src of the JS file to include the cache buster
+          // var script = document.querySelector('script[src*="your-script.js"]');
+          // if (script) {
+          //     script.src = cacheBuster(script.src);
+          // }
+      });
+    </script>
+
  </head>
 
 <body>
