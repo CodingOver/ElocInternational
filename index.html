@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eloc International - English Language Online Center</title>
+  <title>Eloc Internatgitional - English Language Online Center</title>
   <link rel="icon" href="./assets/img/favicon.png">
   <!-- CSS only -->
    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -54,13 +54,13 @@
           }
 
           // Update the src of the JS file to include the cache buster
-          // var script = document.querySelector('script[src*="your-script.js"]');
-          // if (script) {
-          //     script.src = cacheBuster(script.src);
-          // }
+          var script = document.querySelector('script[src*="."]');
+          if (script) {
+              script.src = cacheBuster(script.src);
+          }
       });
     </script>
-
+    
  </head>
 
 <body>
@@ -96,7 +96,7 @@
 </header>
 <!-- header end -->
    <!-- Whatssap Button -->
-<div class="whtssap_btn">
+<div class="whtssap_btn" id="wtsp_btn">
   <a href="https://wa.me/+212604007232" target="_blank">
     <img src="./assets/img/wa_btn.png" alt="WhatsApp Button">
   </a>
@@ -644,4 +644,26 @@
 <!-- Email Js -->
   <script src="assets/js/sweetalert.min.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function checkScrollHeight() {
+            const scrollPosition = window.scrollY || window.pageYOffset;
+            const button = document.getElementById('wtsp_btn');
+
+            // Set the scroll threshold, e.g., 300 pixels
+            const threshold = 900;
+
+            if (scrollPosition <= threshold) {
+                button.style.display = 'none';
+            } else {
+                button.style.display = 'block';
+            }
+        }
+
+        // Check scroll position on scroll event
+        window.onscroll = checkScrollHeight;
+
+        // Initial check in case the user has already scrolled
+        checkScrollHeight();
+  </script>
 </body>
