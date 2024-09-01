@@ -38,28 +38,7 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Clear The cache Automaticly  -->
-    <script>
-      // Function to generate a unique version number (timestamp)
-      function cacheBuster(url) {
-          return url + '?v=' + new Date().getTime();
-      }
-
-      // Example of how to use it with CSS and JS files
-      document.addEventListener("DOMContentLoaded", function() {
-          // Update the href of the CSS file to include the cache buster
-          var stylesheet = document.querySelector('link[rel="stylesheet"]');
-          if (stylesheet) {
-              stylesheet.href = cacheBuster(stylesheet.href);
-          }
-
-          // Update the src of the JS file to include the cache buster
-          var script = document.querySelector('script[src*="."]');
-          if (script) {
-              script.src = cacheBuster(script.src);
-          }
-      });
-    </script>
+    
     
  </head>
 
@@ -435,7 +414,7 @@
               24x7 Support premium
             </li>
           </ul>
-          <a href="#" class="btn">Inscrivez-vous</a>
+          <a href="#" class="btn">Réservez vos séances</a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
@@ -463,7 +442,7 @@
               Cours de Cambridge
             </li>
           </ul>
-          <a href="#" class="btn">Inscrivez-vous</a>
+          <a href="#" class="btn">Réservez vos séances</a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
@@ -491,7 +470,7 @@
               Des séances pratique
             </li>
           </ul>
-          <a href="#" class="btn">Inscrivez-vous</a>
+          <a href="#" class="btn">Réservez vos séances</a>
         </div>
       </div>
     </div>
@@ -665,5 +644,27 @@
 
         // Initial check in case the user has already scrolled
         checkScrollHeight();
+  </script>
+  <!-- Clear The cache Automaticly  -->
+  <script>
+    // Function to generate a unique version number (timestamp)
+    function cacheBuster(url) {
+        return url + '?v=' + new Date().getTime();
+    }
+
+    // Example of how to use it with CSS and JS files
+    document.addEventListener("DOMContentLoaded", function() {
+        // Update the href of the CSS file to include the cache buster
+        var stylesheet = document.querySelector('link[rel="stylesheet"]');
+        if (stylesheet) {
+            stylesheet.href = cacheBuster(stylesheet.href);
+        }
+
+        // Update the src of the JS file to include the cache buster
+        // var script = document.querySelector('script[src*="."]');
+        // if (script) {
+        //     script.src = cacheBuster(script.src);
+        // }
+    });
   </script>
 </body>
