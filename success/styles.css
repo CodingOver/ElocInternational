@@ -26,6 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0 10px;
 }
 .success_page .en{
     margin-top: -50px;
@@ -37,6 +38,8 @@ body {
 }
 .success_page .en p {
     font-size: 23px;
+    padding: 20px 0;
+    line-height: 1.5;
 }
 .success_page .ar {
     font-family: "Cairo", sans-serif;
