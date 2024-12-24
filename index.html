@@ -23,7 +23,7 @@
 
 
    <script>
-      !function(f,b,e,v,n,t,s)
+          !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};
       if(!f._fbq)f._fbq=n;
@@ -34,11 +34,26 @@
       'https://connect.facebook.net/en_US/fbevents.js');
       
       fbq('init', '2389688511368991', {
-        autoConfig: false, // Disable automatic configuration
-        autoLogEvents: false // Disable automatic event logging
+        autoConfig: false,
+        autoLogEvents: false
       });
       
-      fbq('track', 'PageView'); // Manually track PageView
+      // Intercept events
+      const originalFbq = fbq;
+      fbq = function(...args) {
+        // Log event arguments for debugging
+        console.log('Pixel event:', args);
+        
+        // Filter out Subscribed Button Click
+        if (args[1] === 'SubscribedButtonClick') {
+          console.log('Blocked Subscribed Button Click event');
+          return; // Skip sending this event
+        }
+        originalFbq.apply(this, args);
+      };
+      
+      fbq('track', 'PageView');
+
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2389688511368991&ev=PageView&noscript=1"
