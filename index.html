@@ -31,12 +31,18 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2389688511368991');
+    fbq('init', '2389688511368991', {
+        autoConfig: false, // Disables automatic event tracking
+        autoConfigEventWhitelist: [] // Ensures no specific events are tracked automatically
+      });
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2389688511368991&ev=PageView&noscript=1"
     /></noscript>
+
+
+  
 
   <!-- Meta Pixel Code -->
   <!-- <script>
